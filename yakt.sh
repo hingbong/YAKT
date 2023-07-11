@@ -15,6 +15,10 @@ else
         LOG=/sdcard/Documents/yakt/yakt.log
     fi
 fi
+# Set schedutil as governor
+echo "schedutil" >> /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+echo "schedutil" >> /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
+echo "schedutil" >> /sys/devices/system/cpu/cpu7/cpufreq/scaling_governor
 
 # Variables
 SC=/sys/devices/system/cpu/cpu0/cpufreq/schedutil
